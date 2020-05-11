@@ -16,8 +16,8 @@ request({url,json:true},(error,{body}={})=>
     }
     else
     {
-     callback(undefined,  "Current Temperature: "+
-     body.current.temperature+"   Feels like: "+body.current.feelslike+"   Weather description: "+ body.current.weather_descriptions )
+     callback(undefined, body.current.weather_descriptions+ "  , Currently it is  "+
+     body.current.temperature+" Degree outside and it feels like  "+body.current.feelslike+" degree outside and the humidity is  " + body.current.humidity  )
     }
 })
 }
